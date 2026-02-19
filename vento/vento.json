@@ -1,0 +1,93 @@
+[
+  {
+    "estacao": "Afubra",
+    "lat": -29.8702151,
+    "lon": -52.3809271,
+    "dir_media": 123.8,
+    "vel_media": 2.0
+  },
+  {
+    "estacao": "Venancio Aires",
+    "lat": -29.6286,
+    "lon": -52.187078,
+    "dir_media": 115.0,
+    "vel_media": 1.04
+  },
+  {
+    "estacao": "Gramado Xavier",
+    "lat": -29.2620591,
+    "lon": -52.6409887,
+    "dir_media": 119.3,
+    "vel_media": 0.85
+  },
+  {
+    "estacao": "Herveiras",
+    "lat": -29.4690573,
+    "lon": -52.6116998,
+    "dir_media": 128.3,
+    "vel_media": 0.22
+  },
+  {
+    "estacao": "Vera Cruz",
+    "lat": -29.706389,
+    "lon": -52.509161,
+    "dir_media": 80.0,
+    "vel_media": 2.23
+  },
+  {
+    "estacao": "Unisc Cta",
+    "lat": -29.6286,
+    "lon": -52.187078,
+    "dir_media": 143.8,
+    "vel_media": 0.79
+  },
+  {
+    "estacao": "Marques De Souza",
+    "lat": -29.3256538,
+    "lon": -52.0950836,
+    "dir_media": 72.7,
+    "vel_media": 0.51
+  },
+  {
+    "estacao": "Sinimbu",
+    "lat": -29.5016944,
+    "lon": -52.5229167,
+    "dir_media": 51.8,
+    "vel_media": 0.92
+  },
+  {
+    "estacao": "Santa Clara Do Sul",
+    "lat": -29.469728,
+    "lon": -52.116922,
+    "dir_media": 95.1,
+    "vel_media": 0.57
+  },
+  {
+    "estacao": "Candelaria",
+    "lat": -29.6861741,
+    "lon": -52.7711799,
+    "dir_media": 138.2,
+    "vel_media": 0.93
+  },
+  {
+    "estacao": "Vale Do Sol",
+    "lat": -29.580466,
+    "lon": -52.6384,
+    "dir_media": 164.7,
+    "vel_media": 0.82
+  },
+  {
+    "estacao": "Vale Verde",
+    "lat": -29.7911473,
+    "lon": -52.182836,
+    "dir_media": 111.9,
+    "vel_media": 1.36
+  },
+  {
+    "estacao": "Estacao Unisc",
+    "lat": -29.6979485,
+    "lon": -52.4409389,
+    "dir_media": 141.9,
+    "vel_media": 1.54
+  }
+]
