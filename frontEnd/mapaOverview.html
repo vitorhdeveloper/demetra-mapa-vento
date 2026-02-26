@@ -139,14 +139,30 @@
 		let fullHeatData = [];
 		let currentNorm = 4; // divisor usado para normalizar heatmap
 		let selectedStation = '__all';
+		const DATA_PATHS = [
+			'../backEnd/vento/vento.json',
+			'backEnd/vento/vento.json',
+			'vento/vento.json'
+		];
+
+		async function fetchWindData() {
+			for (const path of DATA_PATHS) {
+				try {
+					const res = await fetch(path);
+					if (!res.ok) continue;
+					return await res.json();
+				} catch (_) {}
+			}
+
+			throw new Error('Nenhum caminho de dados válido encontrado: ' + DATA_PATHS.join(', '));
+		}
+
 		async function loadDados(showErrors = true) {
 			if (loading) return;
 			loading = true;
 			setLoadingIndicator(true);
 			try {
-				const res = await fetch('vento/vento.json');
-				if (!res.ok) throw new Error('HTTP ' + res.status);
-				const dados = await res.json();
+				const dados = await fetchWindData();
 				if (!Array.isArray(dados) || dados.length === 0) {
 					console.warn('vento.json vazio ou formato inesperado', dados);
 					loading = false;
@@ -210,7 +226,7 @@
 					const center = map.getCenter();
 					L.popup({ closeOnClick: false, autoClose: false })
 						.setLatLng(center)
-						.setContent('<b>Erro ao carregar dados do vento.</b><br>Verifique o caminho <code>vento/vento.json</code> e o console.')
+						.setContent('<b>Erro ao carregar dados do vento.</b><br>Verifique os caminhos <code>../backEnd/vento/vento.json</code>, <code>backEnd/vento/vento.json</code> ou <code>vento/vento.json</code> e o console.')
 						.openOn(map);
 				}
 			} finally {

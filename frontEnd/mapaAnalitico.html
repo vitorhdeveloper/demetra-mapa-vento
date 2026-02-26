@@ -793,8 +793,31 @@
       }
     }
 
-    fetch('vento/vento.json')
-      .then(res => res.json())
+    const DATA_PATHS = [
+      '../backEnd/vento/vento.json',
+      'backEnd/vento/vento.json',
+      'vento/vento.json'
+    ];
+
+    function loadWindData(){
+      let idx = 0;
+
+      function tryNext(){
+        if (idx >= DATA_PATHS.length) {
+          throw new Error(`Nenhum caminho de dados válido encontrado. Tentativas: ${DATA_PATHS.join(', ')}`);
+        }
+
+        const path = DATA_PATHS[idx++];
+        return fetch(path).then(res => {
+          if (!res.ok) throw new Error(`Falha em ${path} (HTTP ${res.status})`);
+          return res.json();
+        }).catch(() => tryNext());
+      }
+
+      return tryNext();
+    }
+
+    loadWindData()
       .then(dados => {
         originalData = dados || [];
 
