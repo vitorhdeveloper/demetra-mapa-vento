@@ -1,0 +1,67 @@
+[
+  {
+    "nome": "UNISC Afubra",
+    "latitude": -29.8702151,
+    "longitude": -52.3809271
+  },
+  {
+    "nome": "UNISC Vera Cruz",
+    "latitude": -29.7063890,
+    "longitude": -52.5091610
+  },
+  {
+    "nome": "ESTAÇÃO UNISC",
+    "latitude": -29.6979485,
+    "longitude": -52.4409389
+  },
+  {
+    "nome": "UNISC CTA",
+    "latitude": -29.6286000,
+    "longitude": -52.1870780
+  },
+  {
+    "nome": "UNISC Vale Verde",
+    "latitude": -29.7911473,
+    "longitude": -52.1828360
+  },
+  {
+    "nome": "UNISC Candelária",
+    "latitude": -29.6861741,
+    "longitude": -52.7711799
+  },
+  {
+    "nome": "UNISC Venâncio Aires",
+    "latitude": -29.6286000,
+    "longitude": -52.1870780
+  },
+  {
+    "nome": "UNISC Vale do Sol",
+    "latitude": -29.5804660,
+    "longitude": -52.6384000
+  },
+  {
+    "nome": "UNISC Sinimbu",
+    "latitude": -29.5016944,
+    "longitude": -52.5229167
+  },
+  {
+    "nome": "UNISC Herveiras",
+    "latitude": -29.4690573,
+    "longitude": -52.6116998
+  },
+  {
+    "nome": "UNISC Santa Clara do Sul",
+    "latitude": -29.4697280,
+    "longitude": -52.1169220
+  },
+  {
+    "nome": "UNISC Marques de Souza",
+    "latitude": -29.3256538,
+    "longitude": -52.0950836
+  },
+  {
+    "nome": "UNISC Gramado Xavier",
+    "latitude": -29.2620591,
+    "longitude": -52.6409887
+  }
+]
