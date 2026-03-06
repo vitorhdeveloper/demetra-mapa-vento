@@ -100,7 +100,7 @@ def processar_dados():
     df_final["vx"] = np.cos(np.radians(df_final["direcao"])) * df_final["velocidade"]
     df_final["vy"] = np.sin(np.radians(df_final["direcao"])) * df_final["velocidade"]
 
-    print("\n📊 Estrutura final:")
+    print("\n Estrutura final:")
     print(df_final.info())
 
     # salvar consolidado
