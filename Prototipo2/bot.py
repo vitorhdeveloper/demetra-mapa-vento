@@ -135,11 +135,34 @@ def processar_dados():
 
     print("\n Arquivos recentes por estação criados!")
 
+def limpar_arquivos_antigos():
+
+    # Remove arquivos vento_lote antigos antes de baixar novos dados
+    for arquivo in os.listdir(BASE_DIR):
+        if arquivo.startswith("vento_lote") and arquivo.endswith(".xlsx"):
+            caminho = os.path.join(BASE_DIR, arquivo)
+            os.remove(caminho)
+            print(f"Removido: {arquivo}")
+
+# Remove arquivos antigos da pasta de dados processados
+def limpar_dados_tratados():
+
+    pasta = os.path.join(BASE_DIR, "dadosTratadosVento")
+
+    if os.path.exists(pasta):
+        for arquivo in os.listdir(pasta):
+            caminho = os.path.join(pasta, arquivo)
+            if os.path.isfile(caminho):
+                os.remove(caminho)
+                print(f"Removido da pasta tratada: {arquivo}")
+
+limpar_arquivos_antigos()
+limpar_dados_tratados()
 
 with sync_playwright() as p:
 
     # False mostra o navegador / True roda em segundo plano (sem abrir janela)
-    browser = p.chromium.launch(headless=False)
+    browser = p.chromium.launch(headless=True)
     page = browser.new_page()
 
     page.goto(URL)
@@ -200,8 +223,8 @@ with sync_playwright() as p:
         selecionar_sensores_vento(page)
 
         # AGRUPAR
+        page.wait_for_selector("text=AGRUPAR", timeout=15000)
         page.click("text=AGRUPAR")
-        page.wait_for_timeout(1500)
 
         # EXPORTAR
         with page.expect_download() as d:
