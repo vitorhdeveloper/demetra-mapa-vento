@@ -2,7 +2,7 @@
 
 Projeto voltado ao **estudo e prototipação de visualizações de dados meteorológicos**, com foco em vento (velocidade e direção), utilizando dados de estações climáticas e interfaces interativas em HTML.
 
-Desenvolvido por Vitor Klafke como parte do projeto **LivingAgro+Vales** (UNISC).
+Desenvolvido por Vitor Klafke, sob orientação do Prof. Leonel Tedesco, como parte do projeto LivingAgro+Vales (UNISC).
 
 ---
 
